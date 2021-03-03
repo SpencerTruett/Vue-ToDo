@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>{{ todo.name }}</h2>
+    <h2 :class="{ completed: todo.complete }">{{ todo.name }}</h2>
     <button @click="handleClick">Mark Completed</button>
   </div>
 </template>
@@ -21,5 +21,9 @@ div {
   border: 3px solid tomato;
   margin: 15px;
   padding: 10px;
+}
+.completed {
+  text-decoration: line-through;
+  text-decoration-color: tomato;
 }
 </style>
